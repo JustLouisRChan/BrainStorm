@@ -16,7 +16,7 @@ class _BotNavState extends State<BottomNav>{
       );
   }
 
-  Widget buildNavItem(String title, IconData icon, int index) {
+  Widget buildNavItem(String title, IconData icon, double size, int index) {
     return GestureDetector(
       onTap: () {
         setState(() {
@@ -28,7 +28,7 @@ class _BotNavState extends State<BottomNav>{
         children: [
           Icon(
             icon,
-            size: 20,
+            size: size,
             color: selectedIndex == index
                 ? Color.fromRGBO(86, 63, 232, 1)
                 : Colors.grey,
@@ -61,10 +61,11 @@ class _BotNavState extends State<BottomNav>{
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            buildNavItem('Home', Boxicons.bx_home, 0),
-            buildNavItem('My Courses', Boxicons.bx_book, 1),
-            buildNavItem('Inbox', Boxicons.bx_envelope, 2),
-            buildNavItem('Profile', Boxicons.bx_user, 3),
+            buildNavItem('Home', Boxicons.bx_home, 25,0),
+            buildNavItem('My Courses', Boxicons.bx_book, 25,1),
+            buildNavItem('', Boxicons.bx_cloud_lightning, 35,2),
+            buildNavItem('Inbox', Boxicons.bx_envelope, 25,3),
+            buildNavItem('Profile', Boxicons.bx_user, 25,4),
           ],
         ),
       );
