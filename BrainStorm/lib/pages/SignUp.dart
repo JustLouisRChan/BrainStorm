@@ -211,6 +211,34 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                         ),
                       ),
+                      // Below the Sign Up button
+                      SizedBox(height: 20), // Space between button and text
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center, // Center the text
+                        children: [
+                          Text(
+                            'Already have an account? ',
+                            style: TextStyle(
+                              color: Color(0xFF1D1D1D), // Color for "Already have an account?"
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              // Handle login tap action
+                              print('Login tapped!'); // Replace this with actual navigation to the login page
+                            },
+                            child: Text(
+                              'Login',
+                              style: TextStyle(
+                                color: Color(0xFF563FE8), // Color for "Login"
+                                fontWeight: FontWeight.bold, // Optional: make it bold
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+
                     ],
                   ),
                 ),
