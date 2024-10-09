@@ -106,10 +106,26 @@ class _ProfileContentState extends State<ProfileContent> {
           content: Text("You are not a premium member."),
           actions: [
             ElevatedButton(
-              child: Text("OK"),
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF563FE8),
+              ),
               onPressed: () {
                 Navigator.of(context).pop();
               },
+              child: Text("OK"),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF563FE8),
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => GetPremiumPage()),
+                );
+              },
+              child: Text("Get Premium"),
             ),
           ],
         );
@@ -367,7 +383,7 @@ class PremiumButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 100,
-      height: 25,
+      height:  25,
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
       decoration: BoxDecoration(
         color: Color(0xFF563FE8),
@@ -539,6 +555,21 @@ class ProfileButton extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+//remove after done with everthing this is to take it to the payment page
+class GetPremiumPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Get Premium"),
+      ),
+      body: Center(
+        child: Text("This is the Get Premium page."),
+      ),
     );
   }
 }
