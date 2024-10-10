@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boxicons/flutter_boxicons.dart';
 
 void main() {
   runApp(const FigmaToCodeApp());
@@ -384,7 +385,7 @@ class PremiumButton extends StatelessWidget {
     return Container(
       width: 100,
       height:  25,
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
+ padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
       decoration: BoxDecoration(
         color: Color(0xFF563FE8),
         borderRadius: BorderRadius.circular(5),
@@ -461,13 +462,10 @@ class HomeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          width: 24,
-          height: 24,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-          ),
+        Icon(
+          Boxicons.bx_home,
+          size: 20,
+          color: Colors.black,
         ),
         const SizedBox(height: 5),
         Text(
@@ -489,6 +487,12 @@ class MyCoursesButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Icon(
+          Boxicons.bx_book,
+          size: 20,
+          color: Colors.black,
+        ),
+        const SizedBox(height: 5),
         Text(
           'My Courses',
           style: TextStyle(
@@ -508,13 +512,10 @@ class InboxButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          width: 21.16,
-          height: 23,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12 ),
-          ),
+        Icon(
+          Boxicons.bx_Envelope,
+          size: 20,
+          color: Colors.black,
         ),
         const SizedBox(height: 5),
         Text(
@@ -536,13 +537,10 @@ class ProfileButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          width: 24,
-          height: 23.33,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-          ),
+        Icon(
+          Boxicons.bxsUser,
+          size: 20,
+          color: Colors.black,
         ),
         const SizedBox(height: 5),
         Text(
@@ -559,7 +557,6 @@ class ProfileButton extends StatelessWidget {
   }
 }
 
-//remove after done with everthing this is to take it to the payment page
 class GetPremiumPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
